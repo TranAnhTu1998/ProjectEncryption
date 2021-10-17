@@ -2,11 +2,14 @@ import sys
 from rich.table import Table
 from rich.console import Console
 from rich import print
+
+
 from encryption_caesar import encode_caesar
 from encryption_caesar import decoding_caesar
 
 from encryption_playfire import encode_playfire
 
+from encryption_polybius_square import encode_polybius_square
 console = Console()
 
 
@@ -71,6 +74,9 @@ def select_method():
 
     elif sel == '2':
         method_encod(encode_playfire, "Шифр Плейфейера", True)
+
+    elif sel == '3':
+        method_encod(encode_polybius_square, "Квадрат Полибия", False)
 
     elif sel == 'e' or sel == 'E' or sel == 'в' or sel == 'В':
         exit()
